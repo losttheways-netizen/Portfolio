@@ -1,0 +1,133 @@
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', 'Prompt', sans-serif;
+    background: #ffffff;
+}
+
+/* HERO */
+.hero {
+    padding: 80px 10%;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-family: 'Chonburi';
+    font-size: 48px;
+}
+
+.hero-text h2 {
+    font-family: 'Chonburi';
+    font-size: 40px;
+}
+
+.hero-text h3 {
+    font-family: 'Chonburi';
+    font-weight: 300;
+    color: #777;
+}
+
+
+.description {
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+blockquote.quote {
+    margin: 20px 0;
+    padding: 15px 25px;
+    border-left: 4px solid #333;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 1.05em;
+    font-style: normal;
+    color: #5d5d5d;
+    border-radius: 0 8px 8px 0;
+}
+
+.hero-image img {
+    width: 380px;
+    border-radius: 20px;
+}
+
+/* BUTTON */
+.toggle-btn {
+    border: 1px solid #333;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #333;
+    color: white;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 10%;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img,
+.card video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.caption {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
