@@ -1,31 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ronnawee Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chonburi&family=Inter:wght@300;400;500&family=Prompt:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>This is where you can add information about yourself.</p>
-        </section>
-        <section>
-            <h2>Projects</h2>
-            <p>Showcase your projects here.</p>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <p>Provide your contact details here.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Your Name</p>
-    </footer>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h3>Ronnawee Gunthol</h3>
+                <h1>รณวีห์ กุณฑล</h1>
+                <blockquote class="description quote">
+                    ผมสนใจเรียนรู้ในหลายด้านเช่นเดียวกับทุกคน
+                    แต่ทักษะและประสบการณ์ที่ผมสนใจทั้ง Design และ Law
+                    ซึ่งดูเหมือนจะอยู่คนละโลกกัน
+                    แต่ผมมองว่าการผสมกันของสองศาสตร์นี้
+                    สามารถสร้างมุมมองใหม่ที่แตกต่างได้
+                </blockquote>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/Me-1.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- DESIGN -->
+    <section class="section">
+        <div class="hero-text h2">
+            <h2>Design Works</h2>
+        </div>
+        <button class="toggle-btn" onclick="toggleSection('design')">Show / Hide</button>
+
+        <div id="design" class="grid hidden">
+            <div class="card"><img src="images/work1.jpg">
+                <div class="caption">Project 1</div>
+            </div>
+            <div class="card"><img src="images/work2.jpg">
+                <div class="caption">Project 2</div>
+            </div>
+            <div class="card"><img src="images/work3.jpg">
+                <div class="caption">Project 3</div>
+            </div>
+            <div class="card"><video src="video/work1.mp4" autoplay muted loop></video>
+                <div class="caption">Video Work</div>
+            </div>
+            <div class="card"><img src="images/work4.jpg">
+                <div class="caption">Project 4</div>
+            </div>
+            <div class="card"><img src="images/work5.jpg">
+                <div class="caption">Project 5</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAW -->
+    <section class="section">
+        <div class="hero-text h2">
+            <h2>Law Works</h2>
+        </div>
+        <button class="toggle-btn" onclick="toggleSection('law')">Show / Hide</button>
+
+        <div id="law" class="grid hidden">
+            <div class="card"><img src="images/law1.jpg">
+                <div class="caption">Case Study 1</div>
+            </div>
+            <div class="card"><img src="images/law2.jpg">
+                <div class="caption">Case Study 2</div>
+            </div>
+            <div class="card"><img src="images/law3.jpg">
+                <div class="caption">Case Study 3</div>
+            </div>
+            <div class="card"><img src="images/law4.jpg">
+                <div class="caption">Legal Writing</div>
+            </div>
+            <div class="card"><img src="images/law5.jpg">
+                <div class="caption">Research</div>
+            </div>
+            <div class="card"><img src="images/law6.jpg">
+                <div class="caption">Analysis</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleSection(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+    </script>
+
 </body>
+
 </html>
