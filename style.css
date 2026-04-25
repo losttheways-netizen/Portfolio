@@ -1,133 +1,339 @@
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+/* ================= font ================= */
+.titan-one-regular {
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.chonburi-regular {
+    font-family: "Chonburi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.prompt-light {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.prompt-regular {
+    font-family: "Prompt", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.prompt-semibold {
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.prompt-bold {
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.prompt-black {
+    font-family: "Prompt", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Inter', 'Prompt', sans-serif;
-    background: #ffffff;
+    font-family: sans-serif;
+    overflow-x: hidden;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
-    padding: 80px 10%;
-    animation: fadeIn 1.2s ease;
-}
-
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hero-text h1 {
-    font-family: 'Chonburi';
-    font-size: 48px;
-}
-
-.hero-text h2 {
-    font-family: 'Chonburi';
-    font-size: 40px;
-}
-
-.hero-text h3 {
-    font-family: 'Chonburi';
-    font-weight: 300;
-    color: #777;
-}
-
-
-.description {
-    font-weight: 300;
-    line-height: 1.8;
-    max-width: 500px;
-}
-
-blockquote.quote {
-    margin: 20px 0;
-    padding: 15px 25px;
-    border-left: 4px solid #333;
-    background: rgba(255, 255, 255, 0.03);
-    font-size: 1.05em;
-    font-style: normal;
-    color: #5d5d5d;
-    border-radius: 0 8px 8px 0;
-}
-
-.hero-image img {
-    width: 380px;
-    border-radius: 20px;
-}
-
-/* BUTTON */
-.toggle-btn {
-    border: 1px solid #333;
-    background: transparent;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin: 20px 0;
-    transition: 0.3s;
-}
-
-.toggle-btn:hover {
-    background: #333;
-    color: white;
-}
-
-/* SECTION */
-.section {
-    padding: 60px 10%;
-}
-
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.card {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff0080, #ff0077);
     overflow: hidden;
-    border-radius: 20px;
-    background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* BIG NAME */
+.headline {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    font-family: "Titan One", sans-serif;
+    font-size: clamp(60px, 15vw, 200px);
+    color: #fff;
+
+    line-height: 0.9;
+
+    transform: translateX(-120%);
+    transition: transform 1.2s ease-out;
+
+    z-index: 1;
 }
 
-.card img,
-.card video {
+
+/* When active (after load / scroll) */
+.headline.active {
+    transform: translateX(0);
+}
+
+/* Character image */
+.character {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    max-height: 90vh;
+    z-index: 3;
+}
+
+/* Ensure headline is UNDER character */
+.hero-layer {
+    position: relative;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
 }
 
-.caption {
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 300;
+/* Subtitle */
+.subtitle {
+    position: absolute;
+    font-family: "Chonburi", serif;
+    top: 5vh;
+    font-size: clamp(20px, 2vw, 40px);
+    font-weight: bold;
+    z-index: 4;
 }
 
-.hidden {
+.subtitle2 {
+    position: relative;
+    top: 40vh;
+    font-family: "Chonburi", serif;
+    font-size: clamp(20px, 2vw, 40px);
+    font-weight: bold;
+    z-index: 4;
+}
+
+/* ================= FLOATING BUBBLES ================= */
+.bubble {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(10px);
+    opacity: 0.5;
+    z-index: 2;
+}
+
+/* สี */
+.bubble-blue {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #fff, #00aaff);
+}
+
+.bubble-pink {
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, #fff, #ff00aa);
+}
+
+.bubble-green {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #fff, #00ff88);
+}
+
+/* ================= ABOUT ================= */
+.about {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-family: "prompt-regular", sans-serif;
+    color: #252525;
+}
+
+/* Headings inside about */
+.about h2 {
+    font-family: "Chonburi", serif;
+    font-size: clamp(20px, 2vw, 40px);
+    margin-top: 40px;
+    font-weight: bold;
+    color: #ff0080;
+}
+
+/* ================= SERVICES ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-item img {
+    width: 150px;
+    height: auto;
+}
+
+.service-item p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.projects {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.project-item img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-item p {
+    margin-top: 15px;
+}
+
+/* ================= MODAL ================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
     display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.contact img {
+    width: 180px;
+    height: auto;
+}
+
+.contact-linked img {
+    width: 260px;
+    height: auto;
+}
+
+.contact-phone img {
+    width: 260px;
+    height: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 769px) {
+    .headline br {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .headline {
+        font-size: clamp(100px, 18vw, 180px);
+        transform: translateX(0%);
+        white-space: normal;
+        line-height: 0.9;
+        left: 12%;
+        top: 8%;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .headline.active {
+        transform: translateX(0);
+        /* 👈 หยุดเลื่อนเพิ่ม */
+    }
+
+    .character {
+        right: 40%;
+        transform: translateX(50%);
+        max-height: 85vh;
+    }
+
+    /* IMPORTANT: keep headline under character */
+    .headline.active {
+        transform: translateX(-20%);
+    }
+
+    .service-item img {
+        width: 100px;
+        height: auto;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .contact img {
+        width: 100px;
+        height: auto;
+    }
+
+    .contact-linked img {
+        width: 160px;
+        height: auto;
+    }
+
+    .contact-phone img {
+        width: 160px;
+        height: auto;
     }
 }
