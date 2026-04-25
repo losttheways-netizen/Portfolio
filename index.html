@@ -4,104 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronnawee Portfolio</title>
-
-    <!-- Fonts -->
+    <title>Portfolio Hero</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Chonburi&family=Inter:wght@300;400;500&family=Prompt:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Chonburi&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h3>Ronnawee Gunthol</h3>
-                <h1>รณวีห์ กุณฑล</h1>
-                <blockquote class="description quote">
-                    ผมสนใจเรียนรู้ในหลายด้านเช่นเดียวกับทุกคน
-                    แต่ทักษะและประสบการณ์ที่ผมสนใจทั้ง Design และ Law
-                    ซึ่งดูเหมือนจะอยู่คนละโลกกัน
-                    แต่ผมมองว่าการผสมกันของสองศาสตร์นี้
-                    สามารถสร้างมุมมองใหม่ที่แตกต่างได้
-                </blockquote>
-            </div>
+        <div class="hero-layer">
 
-            <div class="hero-image">
-                <img src="images/me1.png">
-            </div>
+            <h1 class="headline" id="headline">
+                RONN<br>AWEE
+            </h1>
+            <div class="subtitle">PORTFOLIO </div>
+            <!-- Replace with your image -->
+            <img src="images/yourcharacter.png" class="character" />
+            <div class="subtitle2">รณวีห์ กุณฑล</div>
+
         </div>
     </section>
-
-    <!-- DESIGN -->
-    <section class="section">
-        <div class="hero-text h2">
-            <h2>Design Works</h2>
+    <div class="bubble bubble-blue"></div>
+    <div class="bubble bubble-pink"></div>
+    <div class="bubble bubble-green"></div>
+    <section class="about">
+        <h2>The Freelance</h2>
+        <p style="text-align: justify;">Extrovert สนุกสนาน ทำงานออกแบบเป็นอาชีพ ภาษาอังกฤษลื่นๆ ชอบงาน Creative
+            จริงจังแต่ไม่เครียด จบ Design
+            จากออสเตรเลีย แต่นิสัยบ้านนอก
+            ทำงานออกแบบโฆษณามา 10 ปี รับงาน ตั้งแต่ Creative, Art Director, Packaging, Retouch, Writing, ถ่ายภาพ
+            ถ่ายวิดีโอ ตัดต่อ, แปลงานเอกสาร, ปรึกษาเรียนต่อ ตปท. คุยเรื่องหนัง ละคร งานเขียน, ดูไพ่ทาโรห์, เข้าใจโลก
+            เข้าใจงาน แต่ไม่ค่อยเข้าใจตัวเอง
+        </p>
+        <p style="text-align: justify;"> Graphic designer & animator based in Bangkok, Thailand. I help brands stand
+            out with eye-catching
+            visuals and smooth animations. Currently open for freelance projects, collaborations, and interesting
+            challenges. Let's make something cool together.
+        </p>
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="images/iconA.png" alt="Art Director">
+                <p>Art Director</p>
+            </div>
+            <div class="service-item">
+                <img src="images/iconC.png" alt="Creative">
+                <p>Creative</p>
+            </div>
+            <div class="service-item">
+                <img src="images/iconG.png" alt="Graphic Design">
+                <p>Graphic design</p>
+            </div>
+            <div class="service-item">
+                <img src="images/iconE.png" alt="Video Editor">
+                <p>Video Editor</p>
+            </div>
         </div>
-    <button class="toggle-btn" onclick="toggleSection('design')">Show / Hide</button>
+        <h2 class="chonburi-regular">Contact</h2>
+        <section class="contact">
+            <div class="contact-item">
+                <img src="images/contact-1-2.gif" alt="mail">
+            </div>
+            <div class="contact-linked">
+                <img src="images/contact-2-2.gif" alt="linkedin">
+            </div>
+            <div class="contact-item">
+                <img src="images/contact-3-2.gif" alt="IG">
+            </div>
+            <div class="contact-phone">
+                <img src="images/contact-4-2.gif" alt="phone">
+            </div>
+        </section>
+        <section class="projects">
 
-        <div id="design" class="grid hidden">
-            <div class="card"><img src="images/work1.jpg">
-                <div class="caption">Project 1</div>
+            <h2 class="chonburi-regular">The work</h2>
+
+            <div class="project-grid">
+
+                <div class="project-item">
+                    <img src="images/work1.jpg" alt="" onclick="openModal(this.src)">
+                    <p>Ads Poster</p>
+                </div>
+
+                <div class="project-item">
+                    <img src="images/work2.jpg" alt="" onclick="openModal(this.src)">
+                    <p>Online Promotion</p>
+                </div>
+
+                <div class="project-item">
+                    <img src="images/work3.jpg" alt="" onclick="openModal(this.src)">
+                    <p>Online Campaign</p>
+                </div>
+
+                <div class="project-item">
+                    <img src="images/work4.jpg" alt="" onclick="openModal(this.src)">
+                    <p>Display</p>
+                </div>
+
             </div>
-            <div class="card"><img src="images/work2.jpg">
-                <div class="caption">Project 2</div>
-            </div>
-            <div class="card"><img src="images/work3.jpg">
-                <div class="caption">Project 3</div>
-            </div>
-            <div class="card"><video src="video/work1.mp4" autoplay muted loop></video>
-                <div class="caption">Video Work</div>
-            </div>
-            <div class="card"><img src="images/work4.jpg">
-                <div class="caption">Project 4</div>
-            </div>
-            <div class="card"><img src="images/work5.jpg">
-                <div class="caption">Project 5</div>
-            </div>
+        </section>
+
+        <!-- MODAL -->
+        <div id="modal" class="modal" onclick="closeModal()">
+            <img id="modal-img">
         </div>
+
     </section>
 
-    <!-- LAW -->
-    <section class="section">
-        <div class="hero-text h2">
-            <h2>Law Works</h2>
-        </div>
-      <button class="toggle-btn" onclick="toggleSection('law')">Show / Hide</button>
-
-        <div id="law" class="grid hidden">
-            <div class="card"><img src="images/law1.jpg">
-                <div class="caption">Case Study 1</div>
-            </div>
-            <div class="card"><img src="images/law2.jpg">
-                <div class="caption">Case Study 2</div>
-            </div>
-            <div class="card"><img src="images/law3.jpg">
-                <div class="caption">Case Study 3</div>
-            </div>
-            <div class="card"><img src="images/law4.jpg">
-                <div class="caption">Legal Writing</div>
-            </div>
-            <div class="card"><img src="images/law5.jpg">
-                <div class="caption">Research</div>
-            </div>
-            <div class="card"><img src="images/law6.jpg">
-                <div class="caption">Analysis</div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        function toggleSection(id) {
-            const el = document.getElementById(id);
-            el.classList.toggle('hidden');
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
