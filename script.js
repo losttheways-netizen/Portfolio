@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* HEADLINE */
     document.getElementById("headline")?.classList.add("active");
-
+    document.getElementById("subtitle2")?.classList.add("active");
     /* SCROLL FLOAT (ถ้ายังใช้) */
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
