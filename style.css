@@ -114,12 +114,19 @@ body {
 
 .subtitle2 {
     position: relative;
-    top: 40vh;
+    top: 30vh;
     font-family: "Chonburi", serif;
     font-size: clamp(20px, 2vw, 40px);
     font-weight: bold;
     z-index: 4;
+    transform: translateX(-120%);
+    transition: transform 1.2s ease-out;
 }
+
+.subtitle2.active {
+    transform: translateX(0);
+}
+
 
 /* ================= FLOATING BUBBLES ================= */
 .bubble {
@@ -199,7 +206,7 @@ body {
 .projects {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 30px 20px;
 }
 
 .project-grid {
@@ -249,6 +256,8 @@ body {
 .contact {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
     gap: 10px;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -258,17 +267,17 @@ body {
 }
 
 .contact img {
-    width: 180px;
+    width: 160px;
     height: auto;
 }
 
 .contact-linked img {
-    width: 260px;
+    width: 240px;
     height: auto;
 }
 
 .contact-phone img {
-    width: 260px;
+    width: 240px;
     height: auto;
 }
 
@@ -323,17 +332,17 @@ body {
     }
 
     .contact img {
-        width: 100px;
+        width: 80px;
         height: auto;
     }
 
     .contact-linked img {
-        width: 160px;
+        width: 120px;
         height: auto;
     }
 
     .contact-phone img {
-        width: 160px;
+        width: 120px;
         height: auto;
     }
 }
