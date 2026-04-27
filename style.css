@@ -114,7 +114,7 @@ body {
 
 .subtitle2 {
     position: relative;
-    top: 30vh;
+    top: 35vh;
     font-family: "Chonburi", serif;
     font-size: clamp(20px, 2vw, 40px);
     font-weight: bold;
